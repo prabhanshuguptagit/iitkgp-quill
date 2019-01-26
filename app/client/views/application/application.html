@@ -117,6 +117,57 @@
 
         <br>
 
+          <br>
+
+          <div class="divided title"> Skills & Accomplishments </div>
+
+          <div class="field">
+            <label> What's your major skill? </label>
+            <input type="text"
+                   name="study"
+                   placeholder="Computer Science, Product Design, Basket Weaving, etc."
+                   ng-model="user.confirmation.major">
+          </div>
+
+          <div class="field">
+            <label> Github </label>
+            <input type="text"
+                   name="github"
+                   placeholder="https://github.com/foobar"
+                   ng-model="user.confirmation.github">
+          </div>
+
+          <div class="field">
+            <label> Twitter </label>
+            <input type="text"
+                   name="twitter"
+                   placeholder="https://twitter.com/foobar"
+                   ng-model="user.confirmation.twitter">
+          </div>
+          <div class="field">
+            <label> LinkedIn </label>
+            <input type="text"
+                   name="linkedin"
+                   placeholder="https://in.linkedin.com/in/foobar"
+                   ng-model="user.confirmation.linkedin">
+          </div>
+          <div class="field">
+            <label> Skill Sheet (required) </label>
+            <p>
+              Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
+            </p>
+            <a
+              target="_blank"
+              href="https://go.hackmit.org/skill-sheets"
+              class="ui pink button">
+              Upload
+            </a>
+          </div>
+
+          <br>
+          <br>
+
+
         <div class="field" ng-hide="regIsClosed">
           <button type="submit"
                   class="fluid ui blue button"
