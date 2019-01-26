@@ -126,7 +126,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please enter your school name.'
+                  prompt: 'Please enter your Instituion name.'
                 }
               ]
             },
@@ -154,6 +154,15 @@ angular.module('reg')
                 {
                   type: 'empty',
                   prompt: 'Please select a Theme.'
+                }
+              ]
+            },
+            idea: {
+              identifier: 'idea',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please Submite a Idea.'
                 }
               ]
             },
