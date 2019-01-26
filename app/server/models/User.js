@@ -28,7 +28,7 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2016 2017 2018 2019'.split(' '),
+      values: '2012 2013 2014 2015 2016 2017 2018 2019'.split(' '),
     }
   },
 
@@ -42,6 +42,13 @@ var profile = {
     type: String,
     min: 0,
     max: 1500
+  },
+  theme: {
+    type: String,
+    enum: {
+      values: 'A B C D E'.split(' '),
+    }
+
   },
 
   // Optional info for demographics

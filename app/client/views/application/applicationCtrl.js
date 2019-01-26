@@ -17,12 +17,16 @@ angular.module('reg')
       $scope.user = currentUser.data;
 
       // Is the student from MIT?
+     /*
+
       $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
 
       // If so, default them to adult: true
       if ($scope.isMitStudent){
         $scope.user.profile.adult = true;
-      }
+      } 
+
+      */
 
       // Populate the school dropdown
       populateSchools();
@@ -144,12 +148,21 @@ angular.module('reg')
                 }
               ]
             },
+            theme: {
+              identifier: 'theme',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please select a Theme.'
+                }
+              ]
+            },
             adult: {
               identifier: 'adult',
               rules: [
                 {
                   type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  prompt: 'You must be an adult.'
                 }
               ]
             }
