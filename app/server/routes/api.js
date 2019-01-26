@@ -159,6 +159,8 @@ module.exports = function(router) {
   router.put('/users/:id/profile', isOwnerOrAdmin, function(req, res){
     var profile = req.body.profile;
     var id = req.params.id;
+    console.log(profile);
+    console.log(id);
 
     UserController.updateProfileById(id, profile , defaultResponse(req, res));
   });

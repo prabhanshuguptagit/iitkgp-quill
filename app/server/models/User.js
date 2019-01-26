@@ -47,9 +47,40 @@ var profile = {
     type: String,
     enum: {
       values: 'A B C D E'.split(' '),
-    }
-
+    },
   },
+  idea: {
+    type: String,
+    enum: {
+      values: 'A B C D E'.split(' '),
+    },
+  },
+  major: {
+    type: String,
+    min: 0,
+    max: 200
+  },
+  github: {
+    type: String,
+    min: 0,
+    max: 200
+  },
+  linkedin: {
+    type: String,
+    min: 0,
+    max: 200
+  },
+  twitter: {
+    type: String,
+    min: 0,
+    max: 400
+  },
+  resume: {
+    type: String,
+    min: 0,
+    max: 400
+  },
+
 
   // Optional info for demographics
   gender: {
@@ -338,10 +369,9 @@ schema.statics.getByToken = function(token, callback){
 schema.statics.validateProfile = function(profile, cb){
   return cb(!(
     profile.name.length > 0 &&
-    profile.adult &&
     profile.school.length > 0 &&
-    ['2016', '2017', '2018', '2019'].indexOf(profile.graduationYear) > -1 &&
-    ['M', 'F', 'O', 'N'].indexOf(profile.gender) > -1
+    ['M', 'F', 'O', 'N'].indexOf(profile.gender) > -1 &&
+    ['other', '2012','2013','2014','2015','2016', '2017', '2018', '2019'].indexOf(profile.graduationYear) > -1
     ));
 };
 

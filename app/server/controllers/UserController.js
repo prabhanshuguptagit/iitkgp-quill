@@ -269,17 +269,23 @@ UserController.updateProfileById = function (id, profile, callback){
 
   // Validate the user profile, and mark the user as profile completed
   // when successful.
+  console.log(profile);
   User.validateProfile(profile, function(err){
 
-    if (err){
+    if (err){    
+      console.log(err)
       return callback({message: 'invalid profile'});
     }
+
+    console.log('\ndwedjwodij')
+
 
     // Check if its within the registration window.
     Settings.getRegistrationTimes(function(err, times){
       if (err) {
         callback(err);
       }
+      console.log('dwedjwodij')
 
       var now = Date.now();
 
@@ -296,6 +302,7 @@ UserController.updateProfileById = function (id, profile, callback){
       }
     });
 
+    console.log('dwedjwodij')
     User.findOneAndUpdate({
       _id: id,
       verified: true
